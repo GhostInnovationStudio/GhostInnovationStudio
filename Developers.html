@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>开发者 - 沉入代码的幽灵</title>
+    <link rel="icon" href="logo.png" type="image/png">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            opacity: 0;
+            transition: opacity 2s;
+            background-color: #f4f4f4; /* 背景颜色 */
+        }
+        .menu {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            background-color: #333;
+        }
+
+            .menu li {
+                position: relative;
+                padding: 15px 20px;
+            }
+
+                .menu li a {
+                    color: white;
+                    text-decoration: none;
+                }
+
+                .menu li:hover {
+                    background-color: #575757;
+                }
+
+        .submenu {
+            display: none;
+            position: absolute;
+            background-color: #333;
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+            .submenu li {
+                padding: 10px 15px;
+            }
+
+                .submenu li a {
+                    color: white;
+                }
+
+        .menu li:hover .submenu {
+            display: block;
+        }
+        .header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+        }
+
+            .header img {
+                height: 50px;
+            }
+
+            .header h1 {
+                flex-grow: 1;
+                margin: 0;
+                padding-left: 20px;
+                font-size: 24px;
+            }
+
+        .content {
+            padding: 20px;
+            text-align: center; /* 内容居中 */
+        }
+
+        .developer {
+            display: flex;
+            align-items: center;
+            justify-content: center; /* 水平居中 */
+            text-decoration: none; /* 去掉链接下划线 */
+            color: #333; /* 文字颜色 */
+            margin-top: 20px; /* 图片和文字的顶部间距 */
+        }
+
+            .developer img {
+                width: 40px; /* 图片宽度 */
+                height: 40px; /* 图片高度 */
+                margin-right: 10px; /* 图片与文字之间的间距 */
+            }
+    </style>
+</head>
+<body onload="document.body.style.opacity='1'">
+    <div class="header">
+        <img src="logo.png" alt="GhostCodeNet Logo">
+        <h1>欢迎使用沉入代码的幽灵</h1>
+        <ul class="menu">
+            <li><a href="index.html">首页</a></li>
+            <li>
+                <a href="#about">关于</a>
+                <ul class="submenu">
+                    <li><a href="Developers.html" target="_blank">开发者</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div class="content">
+        <h3>开发者信息</h3>
+        <a href="https://github.com/ghost-in-China" class="developer" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="GitHub Logo">
+            <span>框架&主页|开发 ghost-in-China</span>
+        </a>
+    </div>
+</body>
+</html>
