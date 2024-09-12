@@ -1,8 +1,8 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
-    <title>GhostCodeNet</title>
+    <title>沉入代码的幽灵</title>
     <link rel="icon" href="logo.png" type="image/png">
     <style>
         body {
@@ -35,18 +35,91 @@
         .content {
             padding: 20px;
         }
+        /* 简单的按钮样式 */
+        .my-button {
+            padding: 10px 20px;
+            font-size: 16px;
+            color: white;
+            background-color: blue;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+            .my-button:hover {
+                background-color: darkblue;
+            }
+        .menu {
+            list-style-type: none; 
+            padding: 0;
+            margin: 0; 
+            display: flex; 
+            background-color: #333; 
+        }
+
+            .menu li {
+                position: relative; 
+                padding: 15px 20px; 
+            }
+
+                .menu li a {
+                    color: white; 
+                    text-decoration: none; 
+                }
+
+                .menu li:hover {
+                    background-color: #575757; 
+                }
+        .submenu {
+            display: none;
+            position: absolute; 
+            background-color: #333; 
+            list-style-type: none;
+            padding: 0; 
+            margin: 0;
+        }
+
+            .submenu li {
+                padding: 10px 15px; 
+            }
+
+                .submenu li a {
+                    color: white; 
+                }
+        .menu li:hover .submenu {
+            display: block; 
+        }
     </style>
 </head>
 <body onload="document.body.style.opacity='1'">
     <div class="header">
         <img src="logo.png" alt="GhostCodeNet Logo">
-        <h1>欢迎使用GhostCodeNet</h1>
+        <h1>欢迎使用沉入代码的幽灵</h1>
+        <ul class="menu">
+            <li><a href="index.html">首页</a></li>
+            <li>
+                <a href="#about">关于</a>
+                <ul class="submenu">
+                    <li><a href="Developers.html" target="_blank">开发者</a></li>
+                </ul>
+            </li>
+        </ul>
     </div>
     <div class="content">
         <h3>什么是GhostCodeNet?</h3>
         <h4>GhostCodeNet是一个为灵异爱好者和编程爱好者或开发者们制作的集灵异、编程为一体的网站</h4>
         <h3>声明：</h3>
         <h4>因为制作者的团体是一些初学者可能制作的不太好，请原谅！</h4>
+        <button class="my-button" id="myButton">点击我登录</button>
+
+        <script>
+            const button = document.getElementById('myButton');
+            button.addEventListener('click', function () {
+                alert('登录界面正在制作中...可能需要在等一个月ing');
+            });
+        </script>
+
     </div>
 </body>
 </html>
+
